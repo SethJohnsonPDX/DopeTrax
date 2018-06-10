@@ -1,0 +1,133 @@
+﻿@model DopeTrax.Models.Group
+
+@{
+    ViewBag.Title = "Details";
+}
+@{ 
+    
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.GroupName)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GenreId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenreId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemberCount)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <h4>Songs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Song Name
+        </dt>
+
+        <dd>
+            Artist | <span style="color: red">Duration</span> | <span style="color: green">BPM</span>
+</dd>
+        <br />
+
+
+
+        <dt>
+            92 Explorer
+        </dt>
+
+        <dd>
+            Post Malone | <span style="color: red">4:01</span> | <span style="color: green">C75 BPM</span>
+</dd>
+
+        <dt>
+            Still Beating
+        </dt>
+
+        <dd>
+            Mac Demarco | <span style="color: red">3:56</span> | <span style="color: green">67 BPM</span>
+</dd>
+
+        <dt>
+            What It's Like
+        </dt>
+
+        <dd>
+            Everlast | <span style="color: red">4:15</span> | <span style="color: green">84 BPM</span>
+</dd>
+
+        <dt>
+            B.I.D
+        </dt>
+
+        <dd>
+            Tory Lanez | <span style="color: red">3:33</span> | <span style="color: green">82 BPM</span>
+</dd>
+
+        <dt>
+            Miss Right
+        </dt>
+
+        <dd>
+            Anderson .Paak | <span style="color: red">4:23</span> | <span style="color: green">90 BPM</span>
+</dd>
+
+        <dt>
+            The Motto
+        </dt>
+
+        <dd>
+            Drake, Lil' Wayne | <span style="color: red">3:47</span> | <span style="color: green">89 BPM</span>
+</dd>
+
+        <dt>
+            James Joint
+        </dt>
+
+        <dd>
+            Rihanna | <span style="color: red">3:44</span> | <span style="color: green">70 BPM</span>
+</dd>
+
+        <dt>
+            Shy
+        </dt>
+
+        <dd>
+            Leon Bridges | <span style="color: red">3:50</span> | <span style="color: green">87 BPM</span>
+</dd>
+
+        <dt>
+            High Times
+        </dt>
+
+        <dd>
+            Marcus Marr | <span style="color: red">5:31</span> | <span style="color: green">115 BPM</span>
+</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GroupId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

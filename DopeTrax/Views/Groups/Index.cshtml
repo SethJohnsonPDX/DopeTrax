@@ -1,0 +1,51 @@
+﻿@using DopeTrax.Models;
+@model IEnumerable<DopeTrax.Models.Group>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+</br>
+<p>See your list of DopeTrax Groups below or  @Html.ActionLink("create new", "Create") </p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th>
+            Group Artwork
+        </th>
+        <th>
+            Created by
+        </th>
+    </tr>
+
+@foreach (var group in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => group.GroupName)
+        </td>
+        <td>
+            <img src="@Url.Content(group.Artwork)" height="120" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => group.Creator)
+        </td>
+        <td>
+            <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Edit", new { id=group.GroupId })'">
+                Edit
+            </button>
+
+            <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Details", new { id=group.GroupId })'">
+                Details
+            </button>
+
+            <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id=group.GroupId })'">
+                Delete
+            </button>
+        </td>
+    </tr>
+}
+
+</table>
